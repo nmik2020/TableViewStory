@@ -26,6 +26,7 @@
         // Custom initialization
     }
     return self;
+    
 }
 
 - (void)viewDidLoad
