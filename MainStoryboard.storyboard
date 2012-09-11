@@ -23,10 +23,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="96"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="juH-pQ-5ID">
-                                            <rect key="frame" x="15" y="9" width="70" height="73"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="qos-Ub-IIY">
                                             <rect key="frame" x="115" y="9" width="165" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -41,11 +37,15 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="StJ-ZI-Uuk">
+                                            <rect key="frame" x="13" y="4" width="88" height="88"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <outlet property="carImage" destination="juH-pQ-5ID" id="dg9-6A-LN5"/>
+                                    <outlet property="carImage" destination="StJ-ZI-Uuk" id="uUr-hJ-O4M"/>
                                     <outlet property="makeLabel" destination="qos-Ub-IIY" id="8d0-2i-LUm"/>
                                     <outlet property="modelLabel" destination="ZhB-xb-Jm6" id="ZaQ-qb-R5n"/>
                                     <segue destination="ML1-I9-a2L" kind="push" identifier="ShowCarDetails" id="YT6-li-Yne"/>
@@ -135,6 +135,30 @@
             <point key="canvasLocation" x="205" y="-26"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="CarDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CarDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="makeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="modelLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="CarTableViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CarTableViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="carImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="makeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="modelLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="CarTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CarTableViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="carImage" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

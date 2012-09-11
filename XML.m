@@ -12,5 +12,5 @@
 
 @synthesize make = _make;
 @synthesize model = _model;
-@synthesize image = _image;
+//@synthesize image = _image;
 @end
