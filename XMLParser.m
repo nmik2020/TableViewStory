@@ -24,7 +24,6 @@
 @synthesize originalSecret = _originalSecret;
 @synthesize YQLQuery2 = _YQLQuery2;
 
-//@synthesize yahoo = _yahoo;
 
 - (id) init {
     
@@ -33,7 +32,6 @@
         _data			= [[NSMutableArray alloc] init];
         _title          = [[NSMutableArray alloc]init];
         _photoid			= [[NSMutableArray alloc] init];
-//        _detailDic          = [[NSMutableDictionary alloc]init];
         
     }
     
@@ -55,10 +53,6 @@
 }
 -(id) loadXMLByString:(NSString *)XMLString
 {
-//	_data			= [[NSMutableArray alloc] init];
-//    _title          = [[NSMutableArray alloc]init];
-//    _photoid			= [[NSMutableArray alloc] init];
-//    _detailDic          = [[NSMutableDictionary alloc]init];
     NSData* data = [XMLString dataUsingEncoding:NSUnicodeStringEncoding];
     parser			= [[NSXMLParser alloc] initWithData:data];
 	parser.delegate = self;

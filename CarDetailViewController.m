@@ -19,7 +19,6 @@
 @synthesize carDetailModel = _carDetailModel;
 @synthesize url = _url;
 
-//XMLParser *xmlParser;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,22 +33,13 @@
 - (void)viewDidLoad
 {
     
-   //NSString *myurl = @"http://farm8.staticflickr.com/7256/7874621294_e989db874b_b.jpg";
-   // NSData *imageData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:myurl]];
-    //UIImage * image = [UIImage imageWithData:imageData];
-    self.makeLabel.text = [self.carDetailModel objectAtIndex:0];
+       self.makeLabel.text = [self.carDetailModel objectAtIndex:0];
     self.modelLabel.text = [self.carDetailModel objectAtIndex:1];
     self.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[self.carDetailModel objectAtIndex:2]]]];
                           
-    //self.imageView.image = [UIImage imageWithData:imageData];
+   
     [super viewDidLoad];
-//    NSString *append1 = [xmlParser.owner objectAtIndex:(0)];
-//    NSString *append2 = [xmlParser.photoid objectAtIndex:(0)];
-//    NSString *fullurl = [NSString stringWithFormat:@"http://www.flickr.com/photos/%@/%@",append1,append2];
-//    NSURL *url = [NSURL URLWithString:fullurl];
-//    [[UIApplication sharedApplication] openURL: url];
-    
-	// Do any additional setup after loading the view.
+
 }
 
 - (void)viewDidUnload

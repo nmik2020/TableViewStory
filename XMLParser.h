@@ -15,21 +15,16 @@
     NSMutableArray *_make;
     NSMutableString	*currentNodeContent;
     NSMutableArray *_model ;
-    //NSMutableArray *_image ;
-    //NSMutableArray *author ;
     NSXMLParser		*parser;
     XML			*currentNode;
-    //bool            isStatus;
     NSMutableArray  *_photoid;
     NSMutableArray *_title ;
     NSMutableArray *_owner ;
     NSMutableArray *_org_secret ;
     NSMutableDictionary *_detailDic;
-   // NSMutableDictionary *_originalSecret;
     NSString *_YQLQuery2 ;
     
-//    Yahoo *yahoo;
-    //id <sendValue> delegate;
+
 
 }
 
@@ -43,7 +38,6 @@
 @property (nonatomic, retain) NSMutableDictionary *detailDic;
 @property (nonatomic, retain) NSMutableDictionary *originalSecret;
 @property (nonatomic, retain) NSString *YQLQuery2;
-//@property (nonatomic, retain) Yahoo *yahoo;
 
 -(id) loadXMLByURL:(NSString *)urlString;
 -(id) loadXMLByString:(NSString *)String;

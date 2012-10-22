@@ -17,20 +17,16 @@
 @synthesize  photoid = _photoid;
 @synthesize detailDic = _detailDic;
 @synthesize originalSecret = _originalSecret;
-static int i=0;
 
-//@synthesize yahoo = _yahoo;
 
 - (id) init {
     
     if(self == [super init]) {
         
-        //_data			= [[NSMutableArray alloc] init];
         
         _originalSecret			= [[NSMutableArray alloc] init];
         
-        //        _detailDic          = [[NSMutableDictionary alloc]init];
-        
+             
     }
     
     return self;

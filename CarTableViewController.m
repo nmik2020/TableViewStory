@@ -94,7 +94,6 @@ bool allocOriginalSecret;
 -(void)getURL:(NSArray *)photoid
 {   _url = [[NSMutableArray alloc]init];
     NSLog(@" Inside GET URL's PHOTO ID%@",photoid);
-    //NSLog(@"Inside GET URL's ORIGINAL SECRET%@",originalsecret);
     for (i=0; i<[xmlParser.photoid count]; i++) {
         NSString *myurl = [NSString stringWithFormat: @"http://farm%@.staticflickr.com/%@/%@_%@_q.jpg",[[photoid objectAtIndex:i]valueForKey:@"farm"],[[photoid objectAtIndex:i]valueForKey:@"server"],[[photoid objectAtIndex:i]valueForKey:@"id"],[[photoid objectAtIndex:i]valueForKey:@"secret"]];
         [_url addObject:myurl];
@@ -108,8 +107,7 @@ bool allocOriginalSecret;
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -172,74 +170,14 @@ bool allocOriginalSecret;
                                                [self.url objectAtIndex:myIndexPath.row],
                                                
                                                nil];
-        //detailViewController.url = self.url;
     }
-    
-//    
-//    if ([[segue identifier] isEqualToString:@"ShowCarDetails"])
-//    {
-//        CarDetailViewController *detailViewController = 
-//        [segue destinationViewController];
-//        
-//        NSIndexPath *myIndexPath = [self.tableView 
-//                                    indexPathForSelectedRow];
-//        
-//        detailViewController.carDetailModel = [[NSArray alloc]
-//                                               initWithObjects: [xmlParser.photoid 
-//                                                                 objectAtIndex:[myIndexPath row],nil]];
-//    }
-}
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+}   
 
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+  
 }
 
 @end
